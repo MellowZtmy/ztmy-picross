@@ -1,0 +1,76 @@
+body {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 40px); /* 5列 + ヒント列 */
+    grid-template-rows: repeat(6, 40px);   /* 5行 + ヒント行 */
+    gap: 2px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #33334d;
+    border: 1px solid #555;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.cell.hint {
+    background-color: #2e2e3e;
+    color: #bb86fc;
+    border: none;
+    cursor: default;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cell[data-state="empty"] {
+    background-color: #33334d;
+}
+
+.cell[data-state="filled"] {
+    background-color: #000;
+}
+
+.cell[data-state="x"] {
+    background-color: #33334d;
+    color: #bb86fc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+#message {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
