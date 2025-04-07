@@ -43,6 +43,13 @@ body {
     font-weight: bold;
 }
 
+.hint {
+    font-size: 14px; /* ヒントの文字サイズを調整 */
+    text-align: center; /* ヒントを中央揃え */
+    line-height: 1.5; /* 行間を調整して見やすくする */
+    white-space: pre; /* 改行を反映させる */
+}
+
 .cell[data-state="empty"] {
     background-color: #33334d;
 }
